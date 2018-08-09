@@ -45,7 +45,7 @@
     "long": "^1.1.5",
     "method-override": "*",
     "node-schedule": "~0.1.16",
-    "npm": "^2.12.1",
+    "npm": "^5.6.0",
     "pkginfo": "^0.3.0",
     "randomstring": "*",
     "request": "*",
