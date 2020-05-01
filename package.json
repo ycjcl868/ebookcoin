@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node app.js",
     "test": "mocha",
-    "cov": "mocha --require blanket -R html-cov test/helpers test/logic > tmp/coverage.html"
+    "cov": "mocha --require blanket -R html-cov test/helpers test/logic > tmp/coverage.html",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": "0.12.*"
@@ -63,7 +65,8 @@
     "valid-url": "^1.0.9",
     "validator": "^4.0.6",
     "validator.js": "^1.2.2",
-    "z-schema": "https://github.com/Ebookcoin/z-schema/tarball/master"
+    "z-schema": "https://github.com/Ebookcoin/z-schema/tarball/master",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "blanket": "~1.1.6",
@@ -86,21 +89,19 @@
     "should": "~4.6.0",
     "supertest": "^1.0.1"
   },
-
   "apidoc": {
     "title": "Ebookcoin Api Docs",
-    "url" : "http://test.ebookchain.org",
+    "url": "http://test.ebookchain.org",
     "sampleUrl": "http://test.ebookchain.org",
     "header": {
       "title": "About these Docs",
       "filename": "docs/header.md"
     },
     "template": {
-    	"withCompare": true,
-    	"withGenerator": true
+      "withCompare": true,
+      "withGenerator": true
     }
   },
-
   "config": {
     "blanket": {
       "pattern": [
@@ -113,5 +114,6 @@
         "tmp"
       ]
     }
-  }
+  },
+  "snyk": true
 }
